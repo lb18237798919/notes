@@ -1,0 +1,34 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-26 17:07:03
+ * @LastEditTime: 2020-07-27 13:35:20
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \html_css_material\第三天\13-CSS字体属性之复合属性.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS字体属性之复合属性</title>
+    <style>
+       /* 想要div文字变倾斜 加粗 字号设置为16像素 并且 是微软雅黑 */
+       div {
+           /* font-style: italic;
+           font-weight: 700;
+           font-size: 16px;
+           font-family: 'Microsoft yahei'; */
+           /* 复合属性: 简写的方式  节约代码 */
+           /* font: font-style  font-weight  font-size/line-height  font-family; */
+           /* font: italic 700 16px 'Microsoft yahei'; */
+           font: 20px '黑体';
+           /* 其他可以省略，这两个不能省略 */
+       }
+    </style>
+</head>
+<body>
+   <div>三生三世十里桃花,一心一意百行代码</div>
+</body>
+</html>

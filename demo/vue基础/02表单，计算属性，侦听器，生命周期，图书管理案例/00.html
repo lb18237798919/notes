@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="time">
+        <a>{[now_time]}</a>
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var time = new Vue({
+            el: '#time',
+            data() {
+                return {
+                    now_time: new Date()
+                }
+            },
+            delimiters: ['{[', ']}'],
+            mounted() {
+                this.timer = setInterval(() => {
+                    this.now_time = new Date()
+                }, 1000)
+            },
+            beforeDestroy() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+            },
+        })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript" src="js/axios.js"></script>
+  <script type="text/javascript">
+    axios.get('https://view.inews.qq.com/g2/getOnsInfo?name=disease_foreign').then(function (res) {
+      // 注意data属性是固定的用法，用于获取后台的实际数据
+
+      let foreinData;
+      let chinaData;
+      foreinData = JSON.parse(res.data);
+      console.log(foreinData);
+      // console.log(ret.data)
+      // Formadata = JSON.parse(res.data["data"])
+      // console.log(Formadata)
+    });
+  </script>
+</body>
+
+</html>
